@@ -1,0 +1,26 @@
+package EjercicioPrueba;
+
+import java.util.Scanner;
+
+public class EjercicioPrueba {
+
+	public static void main(String[] args) {
+		Scanner entrada= new Scanner(System.in);
+		FuncPrueba cDorsales =new FuncPrueba();
+		int llegadaDorsales[]=new int [2];
+		int dorsalActual=0;
+		int j=0;
+		while(dorsalActual!=-1) {
+			System.out.println("Introduce el dorsal");
+			dorsalActual=entrada.nextInt();
+			if(dorsalActual!=-1) {
+				if(j==llegadaDorsales.length) {
+					llegadaDorsales=cDorsales.participantes(llegadaDorsales);
+				}
+				llegadaDorsales[j]=dorsalActual;
+				j++;
+			}
+	}
+cDorsales.mostrarParticipantes(llegadaDorsales);
+	}
+}
